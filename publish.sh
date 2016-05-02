@@ -8,10 +8,15 @@ function get()
 
 function checkexists()
 {
-	npm view $PACKAGE@$VERSION version --loglevel silent > /dev/null;
-	if [[ $? == 0 ]]; then
-		echo "Exists";
-		exit;
+	local versions=`npm view $PACKAGE@$VERSION version --loglevel silent`;
+	if [ -n "$versions" ]; then
+		echo "Package Exists; Checking version...";
+		if [[ $versions != "undefined" ]]; then
+			echo "$PACKAGE@$VERSION Exists ($versions)";
+			exit;
+		fi
+	else
+		echo "$PACKAGE does not have any versions published";
 	fi
 }
 
