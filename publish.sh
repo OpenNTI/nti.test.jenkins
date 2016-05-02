@@ -1,6 +1,21 @@
 #!/bin/bash
 # set -x
 
+function checkbranch ()
+{
+	# local BRANCHES=`git branch --contains $1`;
+	local CURRENT=`git rev-parse --abbrev-ref HEAD`;
+	if [[ $CURRENT == "HEAD" ]]; then
+		(>&2 echo "Error: In detached head state. No known branch.");
+		exit;
+	fi
+
+	if [[ $CURRENT == "feature/"* ]]; then
+		echo "Ignoring feature branches";
+		exit;
+	fi
+}
+
 function get()
 {
 	node -e "process.stdout.write(require('./package.json').$1)"
@@ -30,6 +45,7 @@ if [[ $VERSION == *"alpha"* ]]; then
 	npm --no-git-tag-version version "$VERSION" > /dev/null;
 fi
 
+checkbranch;
 checkexists;
 
 echo "New Version: $VERSION";
