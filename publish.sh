@@ -1,6 +1,9 @@
 #!/bin/bash
 # set -x
 
+#Fail fast
+set -e
+
 #force our publishes to go to our repo, just in case the env or package has not specified it.
 REGISTRY="--registry https://npm.nextthought.com/"
 #publish and only log warn/errors
