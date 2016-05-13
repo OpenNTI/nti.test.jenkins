@@ -63,6 +63,6 @@ checkExists;
 
 echo "New Version: $VERSION";
 
-echo npm publish $TAG $LOGLEVEL $REGISTRY;
+npm publish $TAG $LOGLEVEL $REGISTRY;
 
 git checkout package.json
