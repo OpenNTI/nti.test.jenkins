@@ -5,7 +5,7 @@ export default class Test {
 	}
 
 	foo () {
-		return 'baar';
+		return 'bar';
 	}
 
 }
