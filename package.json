@@ -1,8 +1,8 @@
 {
   "name": "nti-test-jenkins",
   "version": "1.0.1",
-  "author": "nextthought ",
-  "description": "Testing CI publish",
+  "author": "nextthought",
+  "description": "Testing CI publish ",
   "license": "UNLICENSED",
   "main": "./lib/index.js",
   "files": [
