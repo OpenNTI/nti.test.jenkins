@@ -1,5 +1,5 @@
 {
-  "name": "nti-test-jenkins",
+  "name": "nti-test-jenkins ",
   "version": " 1.0.1 ",
   "author": "nextthought. ",
   "description": "Testing CI publish",
@@ -8,7 +8,7 @@
   "files": [
     "lib"
   ],
-  "engines ": {
+  "engines": {
     "node": ">=5.0.0",
     "npm": ">=3.3.0"
   },
