@@ -6,9 +6,9 @@
   "license": "UNLICENSED",
   "main": "./lib/index.js”,
   "files": [
-    "lib "
+    "lib"
   ],
-  "engines": {
+  "engines ": {
     "node": ">=5.0.0",
     "npm": ">=3.3.0"
   },
