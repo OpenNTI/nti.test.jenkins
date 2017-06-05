@@ -5,8 +5,8 @@
   "description": "Testing CI publish",
   "license": "UNLICENSED",
   "main": "./lib/index.js”,
-  "files ": [
-    "lib"
+  "files": [
+    "lib "
   ],
   "engines": {
     "node": ">=5.0.0",
