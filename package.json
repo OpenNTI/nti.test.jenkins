@@ -15,8 +15,8 @@
   "scripts": {
     "test": "karma start --single-run --reporters dots,html,junit,coverage",
     "prepublish": "echo 'testing prepublish'",
-    "bump": "npm version",
-    "postbump": "git push && git push --tags && npm publish"
+    "bump": "echo 'this is where we'd usually call npm version'",
+    "postbump": "echo 'this is where we'd call git push && git push --tags && npm publish'"
   },
   "repository": {
     "type": "git",
