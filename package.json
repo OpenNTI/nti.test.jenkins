@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "karma start --single-run --reporters dots,html,junit,coverage",
-    "prepublish": "not-in-install && make || in-install",
+    "prepublish": "echo 'testing prepublish'",
     "bump": "npm version",
     "postbump": "git push && git push --tags && npm publish"
   },
@@ -25,14 +25,5 @@
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.1.0",
-    "babel-eslint": "^6.0.0",
-    "babel-polyfill": "^6.1.0",
-    "babel-preset-es2015": "^6.1.0",
-    "babel-preset-react": "^6.1.0",
-    "babel-preset-stage-1": "^6.1.0",
-    "eslint-config-nti-codestyle-js": "^1.1.0",
-    "in-publish": "^2.0.0",
-    "nti-unittesting-clientside": "^1.0.3"
   }
 }
