@@ -1,10 +1,10 @@
 {
   "name": "nti-test-jenkins",
-  "version": " 1.0.1 ",
+  "version": "1.0.0-alpha",
   "author": "nextthought",
-  "description": "Testing CI publish ",
+  "description": "Testing CI publish",
   "license": "UNLICENSED",
-  "main": "./lib/index.js”,
+  "main": "./lib/index.js",
   "files": [
     "lib"
   ],
@@ -14,9 +14,9 @@
   },
   "scripts": {
     "test": "karma start --single-run --reporters dots,html,junit,coverage",
-    "prepublish": "not-in-install && make || in-install",
-    "bump": "npm version",
-    "postbump": "git push && git push --tags && npm publish"
+    "prepublish": "echo 'testing prepublish'",
+    "bump": "echo 'this is where we'd usually call  version'",
+    "postbump": "echo 'this is where we'd call  push & push tags & publish'"
   },
   "repository": {
     "type": "git",
@@ -25,14 +25,5 @@
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.1.0",
-    "babel-eslint": "^6.0.0",
-    "babel-polyfill": "^6.1.0",
-    "babel-preset-es2015": "^6.1.0",
-    "babel-preset-react": "^6.1.0",
-    "babel-preset-stage-1": "^6.1.0",
-    "eslint-config-nti-codestyle-js": "^1.1.0",
-    "in-publish": "^2.0.0",
-    "nti-unittesting-clientside": "^1.0.3"
   }
 }
