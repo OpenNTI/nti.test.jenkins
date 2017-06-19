@@ -1,6 +1,6 @@
 {
   "name": "nti-test-jenkins",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha ",
   "author": "nextthought",
   "description": "Testing CI publish",
   "license": "UNLICENSED",
