@@ -16,7 +16,7 @@
     "test": "karma start --single-run --reporters dots,html,junit,coverage",
     "prepublish": "echo 'testing prepublish'",
     "bump": "echo 'this is where we'd usually call  version'",
-    "postbump": "echo 'this is where we'd call  push & push tags & publish'"
+    "postbump": "echo 'this is where we'd call  push & push tags & publish' "
   },
   "repository": {
     "type": "git",
