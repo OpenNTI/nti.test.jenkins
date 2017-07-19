@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://repos.nextthought.com/git/nti.test.jenkins"
+    "url": "https://repos.nextthought.com/git/nti.test.jenkins "
   },
   "keywords": [],
   "dependencies": {},
