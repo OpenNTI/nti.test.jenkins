@@ -2,7 +2,7 @@
   "name": "nti-test-jenkins ",
   "version": "1.0.0-alpha",
   "author": "nextthought",
-  "description": "Testing CI publish",
+  "description": "Testing CI publish ",
   "license": "UNLICENSED",
   "main": "./lib/index.js ",
   "files": [
@@ -13,7 +13,7 @@
     "npm": ">=3.3.0"
   },
   "scripts": {
-    "test": "karma start --single-run --reporters dots,html,junit,coverage",
+    "test": "echo 'hello'",
     "prepublish": "echo 'testing prepublish'",
     "bump": "echo 'this is where we'd usually call  version'",
     "postbump": "echo 'this is where we'd call  push & push tags & publish'"
