@@ -1,6 +1,6 @@
 {
   "name": "nti-test-jenkins   ",
-  "version": "2.1.8",
+  "version": "2.1.8-alpha",
   "author": "nextthought",
   "description": "Testing CI publish  ",
   "license": "UNLICENSED",
@@ -23,6 +23,6 @@
     "url": "https://repos.nextthought.com/git/nti.test.jenkins"
   },
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {"nti-lib-dom": "^1.0.0"},
   "devDependencies": {}
 }
