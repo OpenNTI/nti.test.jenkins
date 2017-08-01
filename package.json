@@ -23,6 +23,6 @@
     "url": "https://repos.nextthought.com/git/nti.test.jenkins"
   },
   "keywords": [],
-  "dependencies": {"nti-lib-dom": "^1.0.0"},
+  "dependencies": {"nti-web-oubound-scholarship": "^1.0.0"},
   "devDependencies": {}
 }
