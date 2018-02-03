@@ -1,15 +1,33 @@
 pipeline {
   agent any
   stages {
-    stage('Print test') {
-      steps {
-        echo 'This is a test'
+    stage('Version') {
+      parallel {
+        stage('Version') {
+          when {
+            not {
+              environment name: 'createTag', value: ''
+            }
+            
+          }
+          steps {
+            echo 'Version detected'
+          }
+        }
+        stage('Snapshot') {
+          when {
+            environment name: 'createTag', value: ''
+          }
+          steps {
+            sh 'echo "Snapshot detected"'
+          }
+        }
       }
     }
-    stage('') {
-      steps {
-        sh 'echo "ech"'
-      }
-    }
+  }
+  parameters {
+    string(name: 'createTag', defaultValue: '', description: '')
+    string(name: 'head', defaultValue: '', description: '')
+    booleanParam(name: 'isCreate', defaultValue: false)
   }
 }

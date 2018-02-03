@@ -1,30 +1,30 @@
 {
-  "name": "nti-test-jenkins           ",
-  "version": "2.1.8-alpha",
-  "author": "nextthought",
-  "description": "Testing CI publish ",
-  "license": "UNLICENSED",
-  "main": "./lib/index.js ",
-  "files": [
-    "lib"
-  ],
-  "engines": {
-    "node": ">=5.0.0 ",
-    "npm": ">=3.3.0"
-  },
-  "scripts": {
-    "test": "echo 'hello'",
-    "prepublish": "echo 'testing prepublish'",
-    "bump": "echo 'this is where we'd usually call  version'",
-    "postbump": "echo 'this is where we'd call  push & push tags & publish'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://repos.nextthought.com/git/nti.test.jenkins"
-  },
-  "keywords": [],
-  "dependencies": {
-    "nti-web-oubound-scholarship": "^1.5.0"
-  },
-  "devDependencies": {}
+    "name": "nti-test-jenkins",
+    "version": "2.1.8-alpha",
+    "author": "nextthought",
+    "description": "Testing CI publish ",
+    "license": "UNLICENSED",
+    "main": "./lib/index.js ",
+    "files": [
+              "lib"
+              ],
+    "engines": {
+        "node": ">=5.0.0 ",
+        "npm": ">=3.3.0"
+    },
+    "scripts": {
+        "test": "echo 'hello'",
+        "prepublish": "echo 'testing prepublish'",
+        "bump": "echo 'this is where we'd usually call  version'",
+        "postbump": "echo 'this is where we'd call  push & push tags & publish'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://repos.nextthought.com/git/nti.test.jenkins"
+    },
+    "keywords": [],
+    "dependencies": {
+        "nti-web-oubound-scholarship": "^1.5.0"
+    },
+    "devDependencies": {}
 }
