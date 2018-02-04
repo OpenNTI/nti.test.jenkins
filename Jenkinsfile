@@ -13,29 +13,7 @@ pipeline {
           steps {
             sh '''echo
 
-"$createTag"
-
-
-
-&& 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-echo "$head"
-&& echo "$isCreate"'''
+"$createTag"'''
           }
         }
         stage('Snapshot') {
@@ -46,28 +24,7 @@ echo "$head"
             sh '''echo
 
 "$createTag"
-
-
-
-&& 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-echo "$head"
-&& echo "$isCreate"'''
+'''
           }
         }
       }
