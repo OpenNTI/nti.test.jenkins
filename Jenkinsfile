@@ -11,7 +11,31 @@ pipeline {
             
           }
           steps {
-            echo 'Version detected'
+            sh '''echo
+
+"$createTag"
+
+
+
+&& 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "$head"
+&& echo "$isCreate"'''
           }
         }
         stage('Snapshot') {
@@ -19,7 +43,31 @@ pipeline {
             environment name: 'createTag', value: ''
           }
           steps {
-            sh 'echo "Snapshot detected"'
+            sh '''echo
+
+"$createTag"
+
+
+
+&& 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "$head"
+&& echo "$isCreate"'''
           }
         }
       }
