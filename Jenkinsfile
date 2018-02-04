@@ -11,7 +11,7 @@ pipeline {
             
           }
           steps {
-            echo '${createTag}'
+            echo "${params.createTag}"
           }
         }
         stage('Snapshot') {
@@ -19,14 +19,14 @@ pipeline {
             environment name: 'createTag', value: ''
           }
           steps {
-            echo '$createTag'
+            echo "${params.createTag}"
           }
         }
       }
     }
   }
   parameters {
-    string(name: 'createTag', defaultValue: '', description: 'asdfasdf')
+    string(name: 'createTag', defaultValue: 'aaaa', description: 'asdfasdf')
     string(name: 'head', defaultValue: '', description: '')
     booleanParam(name: 'isCreate', defaultValue: false)
   }
