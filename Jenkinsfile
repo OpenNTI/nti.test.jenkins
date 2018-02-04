@@ -11,9 +11,7 @@ pipeline {
             
           }
           steps {
-            sh '''echo
-
-"work please god"'''
+            sh 'echo "work please god"'
           }
         }
         stage('Snapshot') {
@@ -21,9 +19,7 @@ pipeline {
             environment name: 'createTag', value: ''
           }
           steps {
-            sh '''echo
-
-"work please god"'''
+            sh 'echo "work please god"'
           }
         }
       }
