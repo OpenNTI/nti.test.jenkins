@@ -19,7 +19,7 @@ pipeline {
             environment name: 'createTag', value: ''
           }
           steps {
-            echo '${createTag}'
+            echo '$createTag'
           }
         }
       }
