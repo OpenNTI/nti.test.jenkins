@@ -19,15 +19,15 @@ pipeline {
             environment name: 'createTag', value: ''
           }
           steps {
-            echo "${params.createTag}"
+            echo "${params.head}"
           }
         }
       }
     }
   }
   parameters {
-    string(name: 'createTag', defaultValue: 'aaaa', description: 'asdfasdf')
-    string(name: 'head', defaultValue: 'aaaa', description: '')
+    string(name: 'createTag', defaultValue: '', description: 'asdfasdf')
+    string(name: 'head', defaultValue: '', description: '')
     booleanParam(name: 'isCreate', defaultValue: false)
   }
 }
