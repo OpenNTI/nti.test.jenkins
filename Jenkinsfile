@@ -13,7 +13,7 @@ pipeline {
           steps {
             sh '''echo
 
-"$(params.createTag}"'''
+"work please god"'''
           }
         }
         stage('Snapshot') {
@@ -23,7 +23,7 @@ pipeline {
           steps {
             sh '''echo
 
-"$(params.createTag}"'''
+"work please god"'''
           }
         }
       }
