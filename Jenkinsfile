@@ -11,7 +11,7 @@ pipeline {
             
           }
           steps {
-            echo '${params.createTag}'
+            echo '${createTag}'
           }
         }
         stage('Snapshot') {
@@ -19,7 +19,7 @@ pipeline {
             environment name: 'createTag', value: ''
           }
           steps {
-            echo '${params.createTag}'
+            echo '${createTag}'
           }
         }
       }
