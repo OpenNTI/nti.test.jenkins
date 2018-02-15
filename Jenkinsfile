@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Version') {
+    stage('Build') {
       parallel {
         stage('Version') {
           when {
