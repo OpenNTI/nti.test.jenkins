@@ -22,6 +22,11 @@ pipeline {
             echo "${params.head}"
           }
         }
+        stage('Pull Request') {
+          steps {
+            echo 'Pull Request'
+          }
+        }
       }
     }
   }
