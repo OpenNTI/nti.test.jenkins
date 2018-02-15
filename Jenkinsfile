@@ -23,6 +23,13 @@ pipeline {
           }
         }
         stage('Pull Request') {
+          when {
+            allOf {
+              environment name: 'createTag', value: ''
+              environment name: 'head', value: ''
+            }
+            
+          }
           steps {
             echo 'Pull Request'
           }
