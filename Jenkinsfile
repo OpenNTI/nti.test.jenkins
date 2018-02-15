@@ -16,7 +16,10 @@ pipeline {
         }
         stage('Snapshot') {
           when {
-            environment name: 'createTag', value: ''
+            not {
+              environment name: 'head', value: ''
+            }
+            
           }
           steps {
             echo "${params.head}"
