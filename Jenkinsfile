@@ -47,7 +47,7 @@ pipeline {
   parameters {
     string(name: 'createTag', defaultValue: '', description: '')
     string(name: 'head', defaultValue: '', description: '')
-    booleanParam(name: 'isCreate', defaultValue: false)
     booleanParam(name: 'buildAsSnapshot', defaultValue: false)
+    booleanParam(name: 'isCreate', defaultValue: false)
   }
 }
