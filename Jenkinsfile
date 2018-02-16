@@ -48,5 +48,6 @@ pipeline {
     string(name: 'createTag', defaultValue: '', description: '')
     string(name: 'head', defaultValue: '', description: '')
     booleanParam(name: 'buildAsSnapshot', defaultValue: false)
+	booleanParam(name: 'isCreate', defaultValue: false)
   }
 }
