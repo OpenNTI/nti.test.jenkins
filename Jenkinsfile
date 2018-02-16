@@ -25,7 +25,7 @@ pipeline {
             echo "${params.head}"
           }
         }
-        stage('Pull Request') {
+        stage('Test') {
           when {
             allOf {
               environment name: 'createTag', value: ''
@@ -34,7 +34,7 @@ pipeline {
             
           }
           steps {
-            echo 'Pull Request'
+            echo 'Test'
           }
         }
       }
