@@ -16,8 +16,12 @@ pipeline {
         }
         stage('Snapshot') {
           when {
-            not {
-              environment name: 'head', value: ''
+            anyOf {
+              environment name: 'buildAsSnapshot', value: 'true'
+              not {
+                environment name: 'head', value: ''
+              }
+              
             }
             
           }
@@ -44,5 +48,6 @@ pipeline {
     string(name: 'createTag', defaultValue: '', description: '')
     string(name: 'head', defaultValue: '', description: '')
     booleanParam(name: 'isCreate', defaultValue: false)
+    booleanParam(name: 'buildAsSnapshot', defaultValue: false)
   }
 }
