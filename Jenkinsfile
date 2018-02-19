@@ -1,5 +1,5 @@
 @Library("SharedLibrariesTest") _
     standardPipeline {
-        projectName = "${env.head}"
+        projectName = "${head}"
         serverDomain = "Project1 Server Domain"
     }
