@@ -1,5 +1,5 @@
 @Library("SharedLibrariesTest") _
     standardPipeline {
-        projectName = "Project1"
+        projectName = "${params.createTag}"
         serverDomain = "Project1 Server Domain"
     }
