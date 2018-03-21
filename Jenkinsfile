@@ -16,7 +16,7 @@ pipeline {
             
           }
           steps {
-            echo "${params.createTag}"
+            sh 'git describe --exact-match ${GIT_COMMIT}'
           }
         }
         stage('Snapshot') {
@@ -31,7 +31,7 @@ pipeline {
             
           }
           steps {
-            echo "${params.head}"
+            sh 'git describe --exact-match ${GIT_COMMIT}'
           }
         }
         stage('Test') {
@@ -43,7 +43,7 @@ pipeline {
             
           }
           steps {
-            echo 'Test'
+            sh 'git describe --exact-match ${GIT_COMMIT}'
           }
         }
       }
