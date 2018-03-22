@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Test') {
           steps {
-            sh 'echo $GIT_URL'
+            git(url: '$GIT_URL', branch: 'master', credentialsId: '3d8be6d3-d795-4bfc-8962-6a6bd0bbf35d')
           }
         }
       }
