@@ -11,7 +11,7 @@ pipeline {
         stage('Version') {
           when {
             not {
-              environment name: 'createTag', value: ''
+              environment name: 'createTag', value: '   '
             }
             
           }
