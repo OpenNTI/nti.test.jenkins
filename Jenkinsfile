@@ -16,7 +16,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe --always'
+            sh 'git describe --contains ${GIT_COMMIT}'
           }
         }
         stage('Snapshot') {
@@ -31,7 +31,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe --always'
+            sh 'git describe --contains ${GIT_COMMIT}'
           }
         }
         stage('Test') {
@@ -43,7 +43,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe --always'
+            sh 'git describe --contains ${GIT_COMMIT}'
           }
         }
       }
