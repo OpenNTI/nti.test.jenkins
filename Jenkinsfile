@@ -36,9 +36,7 @@ pipeline {
         }
         stage('Test') {
           steps {
-            sh '''echo ${GIT_URL}
-
-'''
+            sh 'echo $GIT_URL'
           }
         }
       }
