@@ -16,7 +16,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe'
+            sh 'git describe --always'
           }
         }
         stage('Snapshot') {
@@ -31,7 +31,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe'
+            sh 'git describe --always'
           }
         }
         stage('Test') {
@@ -43,7 +43,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe'
+            sh 'git describe --always'
           }
         }
       }
