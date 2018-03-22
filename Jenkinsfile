@@ -16,7 +16,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}'
+            sh 'git describe'
           }
         }
         stage('Snapshot') {
@@ -31,7 +31,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}'
+            sh 'git describe'
           }
         }
         stage('Test') {
@@ -43,7 +43,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}'
+            sh 'git describe'
           }
         }
       }
