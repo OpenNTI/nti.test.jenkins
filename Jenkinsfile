@@ -35,15 +35,10 @@ pipeline {
           }
         }
         stage('Test') {
-          when {
-            allOf {
-              environment name: 'createTag', value: ''
-              environment name: 'head', value: ''
-            }
-            
-          }
           steps {
-            git(url: '${GIT_URL}', branch: '${GIT_BRANCH}', credentialsId: '3d8be6d3-d795-4bfc-8962-6a6bd0bbf35d')
+            sh '''echo ${GIT_URL}
+
+'''
           }
         }
       }
