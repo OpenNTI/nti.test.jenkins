@@ -43,7 +43,7 @@ pipeline {
             
           }
           steps {
-            sh 'ls'
+            git(url: '${GIT_URL}', branch: '${GIT_BRANCH}', credentialsId: '3d8be6d3-d795-4bfc-8962-6a6bd0bbf35d')
           }
         }
       }
