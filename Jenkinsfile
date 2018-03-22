@@ -43,7 +43,7 @@ pipeline {
             
           }
           steps {
-            sh 'git pull origin master && git describe ${GIT_COMMIT}'
+            sh 'ls'
           }
         }
       }
