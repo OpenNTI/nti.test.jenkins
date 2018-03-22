@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Test') {
           steps {
-            git(url: '$GIT_URL', branch: 'master', credentialsId: '3d8be6d3-d795-4bfc-8962-6a6bd0bbf35d')
+            git(url: 'https://github.com/NextThought/nti.test.jenkins.git', branch: 'master', credentialsId: '3d8be6d3-d795-4bfc-8962-6a6bd0bbf35d')
           }
         }
       }
