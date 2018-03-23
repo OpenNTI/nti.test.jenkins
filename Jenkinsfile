@@ -16,7 +16,7 @@ pipeline {
             
           }
           steps {
-            sh 'git describe ${GIT_COMMIT}'
+            sh 'echo version'
           }
         }
         stage('Snapshot') {
@@ -31,12 +31,12 @@ pipeline {
             
           }
           steps {
-            sh 'git describe ${GIT_COMMIT}'
+            sh 'echo snapshot'
           }
         }
         stage('Test') {
           steps {
-            sh 'echo $GIT_BRANCH'
+            sh 'echo test'
           }
         }
       }
