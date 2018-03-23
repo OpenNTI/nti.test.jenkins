@@ -23,10 +23,6 @@ pipeline {
           when {
             anyOf {
               environment name: 'buildAsSnapshot', value: 'true'
-              not {
-                environment name: 'head', value: ''
-              }
-              
             }
             
           }
@@ -35,6 +31,13 @@ pipeline {
           }
         }
         stage('Test') {
+          when {
+            allOf {
+              environment name: 'buildAsSnapshot', value: 'false'
+              environment name: 'createTag', value: ''
+            }
+            
+          }
           steps {
             sh 'echo test'
           }
@@ -44,8 +47,6 @@ pipeline {
   }
   parameters {
     string(name: 'createTag', defaultValue: '', description: '')
-    string(name: 'head', defaultValue: '', description: '')
     booleanParam(name: 'buildAsSnapshot', defaultValue: false)
-    booleanParam(name: 'isCreate', defaultValue: false)
   }
 }
