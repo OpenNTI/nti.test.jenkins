@@ -1,3 +1,3 @@
-    @Library("SharedLibrariesTest") _
-    standardPipeline {
+    @Library("nti.javascript-modules") _
+    defaultPipeline {
     }
