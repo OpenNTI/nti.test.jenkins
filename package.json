@@ -1,6 +1,6 @@
 {
     "name": "nti-test-jenkins",
-    "version": "2.1.8-alpha",
+    "version": "2.1.9-alpha",
     "author": "nextthought",
     "description": "Testing CI publish",
     "license": "UNLICENSED",
@@ -14,7 +14,7 @@
     },
     "scripts": {
         "test": "echo 'hello'",
-        "prepublish": "echo 'testing prepublish'",
+        "prepack": "echo 'testing prepublish'",
         "bump": "echo 'this is where we'd usually call  version'",
         "postbump": "echo 'this is where we'd call  push & push tags & publish'"
     },
