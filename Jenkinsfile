@@ -1,3 +1,3 @@
     @Library("SharedLibrariesTest") _
-    defaultPipeline {
+    standardPipeline {
     }
