@@ -14,7 +14,7 @@
     },
     "scripts": {
         "test": "echo 'hello'",
-        "prepublish": "echo 'testing prepublish'",
+        "prepack": "echo 'testing prepublish'",
         "bump": "echo 'this is where we'd usually call  version'",
         "postbump": "echo 'this is where we'd call  push & push tags & publish'"
     },
