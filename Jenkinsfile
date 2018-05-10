@@ -1,11 +1,10 @@
 pipeline {
-	agent any
-	stages {
-		stage('testing') {
-			steps {
-				echo '${env.BRANCH_NAME}'
-			}
-		
-		}
-	}
+  agent any
+  stages {
+    stage('testing') {
+      steps {
+        echo '$BRANCH_NAME'
+      }
+    }
+  }
 }
