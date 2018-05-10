@@ -1,3 +1,11 @@
-@Library("nti.javascript-modules") _
-defaultPipeline {
+pipeline {
+	agent any
+	stages {
+		stage('testing') {
+			steps {
+				echo '${BRANCH_NAME}'
+			}
+		
+		}
+	}
 }
