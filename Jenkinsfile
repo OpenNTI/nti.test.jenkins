@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        resolveScm(source: [$class: 'SubversionSCMSource', credentialsId: '28770657-4737-42b7-8448-dbbbc143f50b', id: '_', remoteBase: 'https://repos.nextthought.com/svn/nti-svn/NextThoughtPlatform/'], targets: [])
+        sh 'ls'
+        checkout([$class: 'SubversionSCM', additionalCredentials: [], excludedCommitMessages: '', excludedRegions: '', excludedRevprop: '', excludedUsers: '', filterChangelog: false, ignoreDirPropChanges: false, includedRegions: '', locations: [[cancelProcessOnExternalsFail: true, credentialsId: '28770657-4737-42b7-8448-dbbbc143f50b', depthOption: 'infinity', ignoreExternalsOption: true, local: '.', remote: 'https://repos.nextthought.com/svn/nti-svn/NextThoughtPlatform/trunk/nti.dataserver-buildout']], quietOperation: true, workspaceUpdater: [$class: 'UpdateUpdater']])
       }
     }
   }
