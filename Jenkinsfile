@@ -1,4 +1,4 @@
 @Library("nti.javascript-modules") _
-testingPipeline {
+defaultPipeline {
 	useMattermost = true
 }
