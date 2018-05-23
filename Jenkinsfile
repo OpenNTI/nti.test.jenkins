@@ -1,4 +1,3 @@
-@Library("nti.javascript-modules") _
-testingPipeline {
-}
+options {
 buildDiscarder(logRotator(numToKeepStr: '10'))
+}
