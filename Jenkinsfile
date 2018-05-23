@@ -1,3 +1,5 @@
-options {
-buildDiscarder(logRotator(numToKeepStr: '10'))
+pipeline{
+	options {
+	buildDiscarder(logRotator(numToKeepStr: '10'))
+	}
 }
