@@ -1,0 +1,902 @@
+<testsuite errors="28" failures="6" name="nose2-junit" skipped="0" tests="113" time="28050.119">
+  <testcase classname="nti.webapptests.test_Assignment_Sharing.Test" name="test_sharing_a_questions_assignment" time="621.093863">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Assignment_Sharing.py", line 285, in test_sharing_a_questions_assignment
+    self.remove_shared_assignments_for_questions(non_autograde, atitle)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentSharingAction.py", line 129, in remove_shared_assignments_for_questions
+    self.enter_editing_mode_via_assignment_list_view(question['assignment'])
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentAuthoringAction.py", line 35, in enter_editing_mode_via_assignment_list_view
+    self.wait_for_element("//div[contains(@class, 'show-options')]", 'edit window did not appear', wait=60)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: edit window did not appear
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Sharing.Test" name="test_sharing_assignment_to_lessons" time="281.905533">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Sharing.Test" name="test_sharing_b_shared_assignment_with_without_detach" time="74.139239">
+    <failure message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Assignment_Sharing.py", line 338, in test_sharing_b_shared_assignment_with_without_detach
+    self.validate_assignment_in_savepoints()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentAuthoringAction.py", line 836, in validate_assignment_in_savepoints
+    assert 'disabled' in q.get_attribute('class'), 'this assignment has savepoints, add question should be disabled!!!'
+AssertionError: this assignment has savepoints, add question should be disabled!!!
+</failure>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Sharing.Test" name="test_sharing_c_shared_assignment_assciation_text_tooltip" time="300.526469">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Sharing.Test" name="test_sharing_root_assignment_to_Isection_lessons" time="362.168448">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Sharing.Test" name="test_sharing_root_assignment_to_Ssection_lessons" time="361.881457">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_survery_polls.Test" name="test_view_poll_result_as_prof" time="56.754288">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_survery_polls.py", line 70, in test_view_poll_result_as_prof
+    self.validate_polls_result_as_prof('Poll Examples')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/SurveyPollsAction.py", line 53, in validate_polls_result_as_prof
+    self.show_poll_report(id)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/SurveyPollsAction.py", line 58, in show_poll_report
+    self.check_pdf('InquiryReport.pdf')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/SurveyPollsAction.py", line 101, in check_pdf
+    self.click_on_element("//span[text()='Close']//..//span[@role='img']")
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;span role="img" id="button-1250-btnIconEl" class="x-btn-icon-el  " unselectable="on" style=""&gt;&lt;/span&gt; is not clickable at point (1393, 983). Other element would receive the click: &lt;div class="x-mask" style="top:0;left:0;" id="ext-gen1630"&gt;&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_survery_polls.Test" name="test_view_poll_result_as_prof" time="0.000000">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_survery_polls.py", line 31, in tearDown
+    self.log_out()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 133, in log_out
+    self.click_on_element("//div[contains(@class, 'identity')]/div[@class='profile-pic']")
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;div class="profile-pic" data-qtip="Instructor" id="ext-gen1072"&gt;...&lt;/div&gt; is not clickable at point (1501, 75). Other element would receive the click: &lt;div class="x-mask nti-black-clear" style="height: 2902px; width: 1536px; z-index: 18996; right: auto; left: 0px; top: 0px;" id="ext-gen1628"&gt;&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_survery_polls.Test" name="test_view_survey_result_as_prof" time="71.016873">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_survery_polls.py", line 43, in test_view_survey_result_as_prof
+    self.validate_survey_result_as_prof('Survey 1', 7, 'Review')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/SurveyPollsAction.py", line 30, in validate_survey_result_as_prof
+    self.view_report(response)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/SurveyPollsAction.py", line 78, in view_report
+    self.check_pdf('InquiryReport.pdf')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/SurveyPollsAction.py", line 101, in check_pdf
+    self.click_on_element("//span[text()='Close']//..//span[@role='img']")
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;span role="img" id="button-1292-btnIconEl" class="x-btn-icon-el  " unselectable="on" style=""&gt;&lt;/span&gt; is not clickable at point (1393, 983). Other element would receive the click: &lt;div class="x-mask" style="top:0;left:0;" id="ext-gen1729"&gt;&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_survery_polls.Test" name="test_view_survey_result_as_prof" time="0.000000">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_survery_polls.py", line 31, in tearDown
+    self.log_out()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 133, in log_out
+    self.click_on_element("//div[contains(@class, 'identity')]/div[@class='profile-pic']")
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;div class="profile-pic" data-qtip="Instructor" id="ext-gen1072"&gt;...&lt;/div&gt; is not clickable at point (1501, 75). Other element would receive the click: &lt;div class="x-mask nti-black-clear" style="height: 2990px; width: 1536px; z-index: 18996; right: auto; left: 0px; top: 0px;" id="ext-gen1727"&gt;&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_survery_polls.Test" name="test_view_survey_result_as_student" time="88.822850">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_access_no_submits" time="102.505884">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_Final_grade_to_all_students" time="156.509582">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_final_grade_to_one_student" time="184.999232">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_grade_for_all_student_on_a_quiz_backspacing" time="243.094966">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_grade_for_all_student_on_a_quiz_sorting" time="257.478985">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_grade_for_single_quiz_on_single_student" time="217.869809">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_grade_for_single_quiz_on_single_student_with_excused_grade" time="263.241875">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_grade_for_single_student_on_single_quiz" time="133.787809">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_grades_for_all_quiz_specific_student" time="344.938184">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_grades_for_all_student_on_a_quiz" time="135.444551">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_assign_non_submit_grades_for_all_student_on_a_quiz" time="127.374419">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_GradeAndPerformance_paging_sorting" time="185.244955">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_page_through_students_for_single_assignment" time="54.335867">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_GradebookAsInstructor.py", line 85, in test_page_through_students_for_single_assignment
+    self.gradebookAction.navigate_to_assignments_tab_as_prof('Assignments')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookCommonAction.py", line 216, in navigate_to_assignments_tab_as_prof
+    self.navigate_to_assignments_tab(option_name)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookCommonAction.py", line 232, in navigate_to_assignments_tab
+    current = self.browser.find_element_by_xpath("//div[@class='outline-row x-item-selected']").get_attribute('data-qtip')
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 387, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 957, in find_element
+    'value': value})['value']
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='outline-row x-item-selected']"}
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_GradebookAsInstructor.GradeBookAsInstructorTest" name="test_reset_assignments_for_specific_quiz" time="170.330300">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_assignment_time_scheduling" time="692.846363">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 1090, in test_assignment_time_scheduling
+    self.login_janux(self.open_visible, self.url)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 60, in login_janux
+    self.wait_for_element("//input[@id='username']", 'input username box did not appear')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: input username box did not appear
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_assignment_time_scheduling" time="0.000000">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 60, in tearDown
+    self.log_out()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 127, in log_out
+    if not self.check_already_logged_out():
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 265, in check_already_logged_out
+    self.wait_for_element("//form[@id='login']", 'login page did not show', wait=10)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: login page did not show
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_editing_mode_with_scheduled_lesson" time="197.529693">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_external_link" time="937.827592">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_file_upload" time="596.532835">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_forum_discussion" time="362.119765">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 884, in test_lesson_forum_discussion
+    self.validate_page_content(credit_expected, exact=False)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/CourseContentAction.py", line 122, in validate_page_content
+    self.validate_page_content_titles(expected_content, exact)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/CourseContentAction.py", line 128, in validate_page_content_titles
+    actual_content = self.extract_content_info_from_course_overview()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/shared/CourseOverviewCommonAction.py", line 470, in extract_content_info_from_course_overview
+    self.wait_for_element("//figure[@class='notice empty-state-component']", 'empty state did not appear', wait=2)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: empty state did not appear
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_self_assessment" time="110.798709">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 924, in test_lesson_self_assessment
+    self.add_content_base_on_type(ctype, assignment, promptTitle)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/CourseAuthoringAction.py", line 411, in add_content_base_on_type
+    self.wait_for_element("//div[starts-with(@id, 'overview-editing-content-editor')]", 'overview editor did not disappear', EC.invisibility_of_element_located)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: overview editor did not disappear
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_self_assessment" time="0.000000">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 60, in tearDown
+    self.log_out()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 133, in log_out
+    self.click_on_element("//div[contains(@class, 'identity')]/div[@class='profile-pic']")
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;div class="profile-pic" data-qtip="Jzhu admin" id="ext-gen1072"&gt;...&lt;/div&gt; is not clickable at point (1501, 75). Other element would receive the click: &lt;div class="x-container prompt-container x-container-default" id="prompt-container-2273"&gt;...&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_switch_type" time="510.573605">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_timeline" time="333.267283">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_video_creation" time="204.774787">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 424, in test_lesson_video_creation
+    self.validate_content_overview_video_player(video_information_pairs)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/VideoPlayerAction.py", line 36, in validate_content_overview_video_player
+    self.operate_kaltura_player('Pause', ntiid)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/VideoPlayerAction.py", line 256, in operate_kaltura_player
+    self.wait_for_element("%s//div[contains(@class,'play-pause-control')]" % prefix, "player control did not appear %s//div[contains(@class,'play-pause-control')]" % prefix)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: player control did not appear //div[@data-ntiid='tag:nextthought.com,2011-10:NTIAlpha-NTIVideo-NTI2000_TestCourse.ntivideo.video_Andrew_Johnson']//div[contains(@class,'play-pause-control')]
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_video_edit" time="240.273820">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 546, in test_lesson_video_edit
+    self.open_editor_for_component_by_title(atitle)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/CourseAuthoringAction.py", line 302, in open_editor_for_component_by_title
+    component.find_element_by_xpath(".//div[contains(@class, 'edit')]").click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;div class="x-component nt-button edit x-component-default" id="overview-editing-controls-edit-2541"&gt;...&lt;/div&gt; is not clickable at point (1191, 107). Other element would receive the click: &lt;div class="wrapper"&gt;...&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Content.Test_Course_Authoring_Content" name="test_lesson_video_selection" time="322.405014">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Course_Authoring_Content.py", line 327, in test_lesson_video_selection
+    self.validate_content_overview_video_player(video_information_pairs)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/VideoPlayerAction.py", line 36, in validate_content_overview_video_player
+    self.operate_kaltura_player('Pause', ntiid)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/VideoPlayerAction.py", line 256, in operate_kaltura_player
+    self.wait_for_element("%s//div[contains(@class,'play-pause-control')]" % prefix, "player control did not appear %s//div[contains(@class,'play-pause-control')]" % prefix)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: player control did not appear //div[@data-ntiid='tag:nextthought.com,2011-10:NTIAlpha-NTIVideo-NTI2000_TestCourse.ntivideo.video_02.01.02_How_to_Turingscraft']//div[contains(@class,'play-pause-control')]
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_amex_stripe_enroll_test" time="93.547576">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_coupon_code_enroll_HISTORYTEST_test" time="99.679091">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_expired_card" time="62.054389">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_full_stripe_enroll_test" time="92.554168">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_invalid_coupon_code" time="71.572150">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_processing_error_card" time="40.724444">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Stripe.py", line 186, in test_processing_error_card
+    self.navigate_tolibrary_after_invalid_card('An error occurred while processing your card')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/StripePageAction.py", line 393, in navigate_tolibrary_after_invalid_card
+    self.browser.find_element(*stripe_page_locator.stripe_submit_payment).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 957, in find_element
+    'value': value})['value']
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'button  ') and (@data-action='submit-payment')]"}
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_processing_error_card" time="0.000000">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Stripe.py", line 40, in tearDown
+    self.log_out()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 133, in log_out
+    self.click_on_element("//div[contains(@class, 'identity')]/div[@class='profile-pic']")
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;div class="profile-pic" data-qtip="Stripe Tester4" id="ext-gen1072"&gt;...&lt;/div&gt; is not clickable at point (1501, 75). Other element would receive the click: &lt;div class="x-window available-courses x-layer x-window-nti-window x-plain x-window-plain x-window-nti-window-plain x-closable x-window-closable x-window-nti-window-closable x-unselectable" style="width: 1024px; height: 870px; top: 77px; left: 256px; z-index: 19000;" id="library-available-courses-window-1044" tabindex="-1"&gt;...&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_required_stripe_enroll_test" time="89.328551">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_stripe_bad_card_number" time="58.590494">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_stripe_basic" time="53.076154">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_stripe_invalid_card" time="40.837192">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Stripe.py", line 119, in test_stripe_invalid_card
+    self.navigate_tolibrary_after_invalid_card('Your card was declined.')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/StripePageAction.py", line 393, in navigate_tolibrary_after_invalid_card
+    self.browser.find_element(*stripe_page_locator.stripe_submit_payment).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 957, in find_element
+    'value': value})['value']
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'button  ') and (@data-action='submit-payment')]"}
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_stripe_invalid_card" time="0.000000">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Stripe.py", line 40, in tearDown
+    self.log_out()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 133, in log_out
+    self.click_on_element("//div[contains(@class, 'identity')]/div[@class='profile-pic']")
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;div class="profile-pic" data-qtip="Stripe Tester4" id="ext-gen1072"&gt;...&lt;/div&gt; is not clickable at point (1501, 75). Other element would receive the click: &lt;div class="x-window available-courses x-layer x-window-nti-window x-plain x-window-plain x-window-nti-window-plain x-closable x-window-closable x-window-nti-window-closable x-unselectable" style="width: 1024px; height: 870px; top: 77px; left: 256px; z-index: 19000;" id="library-available-courses-window-1044" tabindex="-1"&gt;...&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_stripe_invalid_cvc_card" time="58.550286">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Stripe.StripeTest" name="test_stripe_missing_information" time="55.503280">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_Assignments_with_autograde_options" time="570.019889">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_Assignments_with_randomized_options" time="353.851195">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_delete_question_in_assignment" time="83.182624">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Assignment_Authoring.py", line 115, in test_delete_question_in_assignment
+    self.delete_assignments(atitle)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentAuthoringAction.py", line 784, in delete_assignments
+    assignments = self.locate_assignments_in_assignment_list(searchString, None, all=True)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookCommonAction.py", line 151, in locate_assignments_in_assignment_list
+    self.clear_assignment_search_string()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookCommonAction.py", line 199, in clear_assignment_search_string
+    self.browser.find_element_by_xpath("//div[@class='search cell']//div[@class='clear']").click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+ElementClickInterceptedException: Message: Element &lt;div id="ext-gen1708" class="clear"&gt; is not clickable at point (1133,154.8000030517578) because another element &lt;div id="ext-gen3372" class="x-mask"&gt; obscures it
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_duplicate_question_in_assignment" time="323.110903">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_discussion_assignment_via_ntiid" time="161.691392">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Assignment_Authoring.py", line 336, in test_generate_discussion_assignment_via_ntiid
+    self.exit_editing_mode_discussion_assignment_to_assignment_list_view()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentAuthoringAction.py", line 48, in exit_editing_mode_discussion_assignment_to_assignment_list_view
+    self.click_on_element(root, wait=10)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 127, in click_on_element
+    self.browser.find_element_by_xpath(xpath).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+ElementClickInterceptedException: Message: Element &lt;div class="path part root"&gt; is not clickable at point (294.7666702270508,160.5) because another element &lt;div id="ext-gen4911" class="x-mask"&gt; obscures it
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_discussion_assignment_via_selection" time="172.596478">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_for_credit_Assignment" time="313.568121">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_mixed_question_Assignment" time="482.043395">
+    <failure message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Assignment_Authoring.py", line 229, in test_generate_mixed_question_Assignment
+    self.answer_all_questions(None, False, 'admin')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentPageAction.py", line 133, in answer_all_questions
+    'answer parsed from question: %s, answer parsed from show solution: %s' % (answer, ranswer)
+AssertionError: answer parsed from question: [], answer parsed from show solution: ['MCChoice 3']
+</failure>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_no_submit_assignment" time="178.055725">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_question_bank_draw_autograded_Assignment" time="1347.325273">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_question_of_each_type_assignment" time="354.147239">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_randomized_question_assignment" time="301.732292">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_generate_timed_assignment" time="84.212496">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_Assignment_Authoring.py", line 291, in test_generate_timed_assignment
+    self.delete_assignments(atitle)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentAuthoringAction.py", line 784, in delete_assignments
+    assignments = self.locate_assignments_in_assignment_list(searchString, None, all=True)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookCommonAction.py", line 151, in locate_assignments_in_assignment_list
+    self.clear_assignment_search_string()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookCommonAction.py", line 199, in clear_assignment_search_string
+    self.browser.find_element_by_xpath("//div[@class='search cell']//div[@class='clear']").click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+ElementClickInterceptedException: Message: Element &lt;div id="ext-gen1708" class="clear"&gt; is not clickable at point (1133,154.8000030517578) because another element &lt;div id="ext-gen3359" class="x-mask"&gt; obscures it
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_ordering_question_in_assignment" time="508.644478">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Assignment_Authoring.Test" name="test_set_edit_time_total_points_for_assignments" time="548.858371">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsProf.AssignmentAsProf" name="test_draft_Assignment_as_prof_admin" time="314.665460">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsProf.AssignmentAsProf" name="test_Fill_in_the_Blank_with_Multiple_Choice" time="65.826817">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsProf.AssignmentAsProf" name="test_Non_Autograded_Assignment_as_prof_admin" time="327.742722">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsProf.AssignmentAsProf" name="test_randomized_questions_and_answers_as_editor" time="129.775802">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsProf.AssignmentAsProf" name="test_randomized_questions_and_answers_as_prof" time="132.006424">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsProf.AssignmentAsProf" name="test_scheduled_Assignment_as_prof_admin" time="402.508003">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsProf.AssignmentAsProf" name="test_self_assessment_quiz" time="138.609848">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_10_Question_Bank_With_Randomized_Answers_Draw_5" time="339.332561">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_Authored_Timed_Assignment" time="79.676697">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_AssignmentAsStudent.py", line 896, in test_Authored_Timed_Assignment
+    self.prof_reset_quiz_assignment(self.studentStr, quiz_name, credit=False)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookPageAction.py", line 264, in prof_reset_quiz_assignment
+    self.navigate_to_grade_and_performance_for_specific_student(studentStr, credit)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/GradebookPageAction.py", line 813, in navigate_to_grade_and_performance_for_specific_student
+    self.browser.find_element(By.XPATH, "//div[@class='accent-name' and @data-qtip='%s']" % qtip).click()
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: unknown error: Element &lt;div class="accent-name" data-qtip="..."&gt;Quiz &lt;b&gt;Tester&lt;/b&gt;&lt;/div&gt; is not clickable at point (872, 1014). Other element would receive the click: &lt;div class="x-mask" style="top:0;left:0;" id="ext-gen2052"&gt;&lt;/div&gt;
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_discussion_assignment_as_student" time="99.319675">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_AssignmentAsStudent.py", line 991, in test_discussion_assignment_as_student
+    self.enter_save_root_comment_in_discussion_modal(root_msg)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/DiscussionAssignmentAction.py", line 161, in enter_save_root_comment_in_discussion_modal
+    self.open_root_level_comment_inputbox()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/DiscussionAssignmentAction.py", line 113, in open_root_level_comment_inputbox
+    'active eidtor window did not appear')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: active eidtor window did not appear
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_enrolled_ordering" time="265.870610">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_essay_quiz" time="232.100823">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_file_upload" time="213.093810">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_fill_in_the_blank_sample_quiz" time="258.457988">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_Fill_in_the_Blank_with_Multiple_Choice" time="256.215848">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_master_worldbank" time="99.021699">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_matching_quiz" time="138.469218">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_Non_Autograded_Assignment" time="158.564757">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_AssignmentAsStudent.py", line 871, in test_Non_Autograded_Assignment
+    self.navigate_to_quiz_from_library_as_student(quiz_name)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentPageAction.py", line 813, in navigate_to_quiz_from_library_as_student
+    self.navigate_to_assignment_from_testcoursepage()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AssignmentPageAction.py", line 884, in navigate_to_assignment_from_testcoursepage
+    'Assignments page did not show up')
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: Assignments page did not show up
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_ordering" time="253.000035">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_Published_Authored_Assignment" time="351.990123">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_scheduled_draft_Assignment_as_student" time="405.070832">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_self_assessment_with_ordering" time="223.717299">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_take_Multiple_Choice_full" time="248.832685">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_take_Multiple_Choice_Multiple_Answer" time="260.977420">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_take_Multiple_Choice_refresh" time="148.075606">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_timed_quiz_300s" time="300.581765">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_timer_count_down_59s_overtime" time="311.500874">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_AssignmentAsStudent.AssignmentAsStudent" name="test_true_or_false" time="264.566614">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notable.test_notable" name="test_add_contact_notable" time="72.574669">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notable.py", line 90, in test_add_contact_notable
+    self.contactaction.add_contact(user_notable_searchStr)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/ContactPageAction.py", line 39, in add_contact
+    self.search_contact(searchStr)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/ContactPageAction.py", line 96, in search_contact
+    self.wait_for_element("//li[@data-text='Contacts']", 'contact link not clickable yet')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: contact link not clickable yet
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notable.test_notable" name="test_new_final_grade_notable" time="153.230808">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notable.test_notable" name="test_new_quiz_grade_feedback_notable" time="140.446298">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notable.test_notable" name="test_notable_from_discussion_tab" time="421.205780">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notable.test_notable" name="test_retreive_notable_after_enrollment" time="108.793352">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Basics.Test_Course_Authoring_Basics" name="test_create_delete_unit_lesson" time="324.868151">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Basics.Test_Course_Authoring_Basics" name="test_display_date_for_lesson" time="300.685294">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Basics.Test_Course_Authoring_Basics" name="test_order_lesson" time="492.456215">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Basics.Test_Course_Authoring_Basics" name="test_order_unit" time="325.089061">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Basics.Test_Course_Authoring_Basics" name="test_publish_unpublish_lesson" time="378.579582">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_Course_Authoring_Basics.Test_Course_Authoring_Basics" name="test_schedule_lesson" time="604.601894">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_comments_delete" time="184.723926">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_create_notes_on_authored_content" time="243.191468">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_create_notes_on_content" time="217.531880">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_create_notes_on_content_as_prof" time="53.992125">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notes.py", line 468, in test_create_notes_on_content_as_prof
+    self.notesAction.open_note_creation_box_in_content(location)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 59, in open_note_creation_box_in_content
+    self.scroll_to_element_xpath("//*[text()='%s']" % location, 0, -400)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 259, in scroll_to_element_xpath
+    element = self.browser.find_element_by_xpath(xpath)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 387, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 957, in find_element
+    'value': value})['value']
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 314, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='The Southern Republicans']"}
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011),platform=Mac OS X 10.13.4 x86_64)
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_create_notes_on_content_as_prof" time="0.000000">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notes.py", line 83, in tearDown
+    self.accountAction.log_out()
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 127, in log_out
+    if not self.check_already_logged_out():
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/AccountsAction.py", line 265, in check_already_logged_out
+    self.wait_for_element("//form[@id='login']", 'login page did not show', wait=10)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: login page did not show
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_create_notes_on_pdf" time="189.216612">
+    <error message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notes.py", line 291, in test_create_notes_on_pdf
+    self.contactAction1.navigate_to_target_profile_via_contact('Quiz Tester')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/ContactPageAction.py", line 124, in navigate_to_target_profile_via_contact
+    self.add_contact(searchStr)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/ContactPageAction.py", line 39, in add_contact
+    self.search_contact(searchStr)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/ContactPageAction.py", line 96, in search_contact
+    self.wait_for_element("//li[@data-text='Contacts']", 'contact link not clickable yet')
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.qa.commons/src/nti/qa/common/web/ActionBase.py", line 52, in wait_for_element
+    WebDriverWait(self.browser, wait).until(until_func(until_args), error)
+  File "/Users/jenkins/cache/nti.qa.buildout-eggs/selenium-3.12.0-py2.7.egg/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+TimeoutException: Message: contact link not clickable yet
+
+</error>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_create_notes_on_self_assessments" time="389.249998">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_external_link_attachments" time="82.203874">
+    <failure message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notes.py", line 692, in test_external_link_attachments
+    self.notesAction.validate_notes_created(studentStr, title, expected_root_attachments, None, comments, None)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 420, in validate_notes_created
+    self.validate_notes_at_detail_level(author, title, content, recipients, comments, correspondent)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 479, in validate_notes_at_detail_level
+    self.validate_attachments(note_element, content['attachment'])
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/WhiteboardAttachmentAction.py", line 72, in validate_attachments
+    assert found_attachments == expected_attachments, "Expected '%s', but found '%s'" % (expected_attachments, found_attachments)
+AssertionError: Expected '[{'bytes': 2932, 'name': 'Sample.txt', 'size': '2.9 KB'}, {'bytes': 147229, 'name': 'Sample.jpg', 'size': '143.8 KB'}]', but found '[{'bytes': None, 'name': u'Sample.txt', 'size': u'2.9 KB'}, {'bytes': None, 'name': u'Sample.jpg', 'size': u'143.8 KB'}]'
+</failure>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_note_attachments" time="97.613304">
+    <failure message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notes.py", line 619, in test_note_attachments
+    self.notesAction.validate_notes_created(studentStr, title, expected_root_attachments, None, comments, None)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 420, in validate_notes_created
+    self.validate_notes_at_detail_level(author, title, content, recipients, comments, correspondent)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 479, in validate_notes_at_detail_level
+    self.validate_attachments(note_element, content['attachment'])
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/WhiteboardAttachmentAction.py", line 72, in validate_attachments
+    assert found_attachments == expected_attachments, "Expected '%s', but found '%s'" % (expected_attachments, found_attachments)
+AssertionError: Expected '[{'bytes': 2932, 'name': 'Sample.txt', 'size': '2.9 KB'}, {'bytes': 147229, 'name': 'Sample.jpg', 'size': '143.8 KB'}]', but found '[{'bytes': None, 'name': u'Sample.txt', 'size': u'2.9 KB'}, {'bytes': None, 'name': u'Sample.jpg', 'size': u'143.8 KB'}]'
+</failure>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_pdf_attachments" time="74.121928">
+    <failure message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notes.py", line 765, in test_pdf_attachments
+    self.notesAction.validate_notes_created(studentStr, title, expected_root_attachments, None, comments, None)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 420, in validate_notes_created
+    self.validate_notes_at_detail_level(author, title, content, recipients, comments, correspondent)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 479, in validate_notes_at_detail_level
+    self.validate_attachments(note_element, content['attachment'])
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/WhiteboardAttachmentAction.py", line 72, in validate_attachments
+    assert found_attachments == expected_attachments, "Expected '%s', but found '%s'" % (expected_attachments, found_attachments)
+AssertionError: Expected '[{'bytes': 2932, 'name': 'Sample.txt', 'size': '2.9 KB'}, {'bytes': 147229, 'name': 'Sample.jpg', 'size': '143.8 KB'}]', but found '[]'
+</failure>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_self_assessment_attachments" time="80.788037">
+    <failure message="test failure">Traceback (most recent call last):
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/webapptests/test_notes.py", line 729, in test_self_assessment_attachments
+    self.notesAction.validate_notes_created(studentStr, title, expected_root_attachments, None, comments, None)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 420, in validate_notes_created
+    self.validate_notes_at_detail_level(author, title, content, recipients, comments, correspondent)
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/NotesAction.py", line 479, in validate_notes_at_detail_level
+    self.validate_attachments(note_element, content['attachment'])
+  File "/Users/jenkins/jenkinsMaster/workspace/QA/Web/Web-Sanity/sources/nti.webapptests/src/nti/pageaction/WhiteboardAttachmentAction.py", line 72, in validate_attachments
+    assert found_attachments == expected_attachments, "Expected '%s', but found '%s'" % (expected_attachments, found_attachments)
+AssertionError: Expected '[{'bytes': 2932, 'name': 'Sample.txt', 'size': '2.9 KB'}, {'bytes': 147229, 'name': 'Sample.jpg', 'size': '143.8 KB'}]', but found '[{'bytes': None, 'name': u'Sample.txt', 'size': u'2.9 KB'}, {'bytes': None, 'name': u'Sample.jpg', 'size': u'143.8 KB'}]'
+</failure>
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_set_note_sharing_to_default" time="129.896672">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_notes.TestNotes" name="test_share_notes_to_distribution_list" time="191.755746">
+    <system-out/>
+  </testcase>
+  <testcase classname="nti.webapptests.test_CourseContent.Test" name="test_video_in_reading" time="91.677436">
+    <system-out/>
+  </testcase>
+</testsuite>
